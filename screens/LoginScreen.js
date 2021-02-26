@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { Button, Image, Input } from 'react-native-elements'
 import { KeyboardAvoidingView } from 'react-native';
 
-const LoginScreen = () => {
+const LoginScreen = ({ navigation }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -45,6 +45,7 @@ const LoginScreen = () => {
         onPress={signIn} 
       />
       <Button 
+        onPress={() => navigation.navigate('Register')}
         containerStyle={styles.button} 
         type='outline' 
         title='Register' 
