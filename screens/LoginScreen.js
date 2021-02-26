@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { Button, Image, Input } from 'react-native-elements'
+import { KeyboardAvoidingView } from 'react-native';
 
 const LoginScreen = () => {
 
@@ -13,7 +14,7 @@ const LoginScreen = () => {
   }
 
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView behavior='padding' style={styles.container}>
       <StatusBar style='light' />
       <Image
         source={{
@@ -48,7 +49,8 @@ const LoginScreen = () => {
         type='outline' 
         title='Register' 
       />
-    </View>
+      <View style={{height: 100}} />
+    </KeyboardAvoidingView>
   )
 }
 
@@ -56,10 +58,11 @@ export default LoginScreen
 
 const styles = StyleSheet.create({
   inputContainer: {
-
+    width: 300,
   }, 
   button: {
-
+    width: 280,
+    marginTop: 10,
   },
   container: {
     flex: 1,

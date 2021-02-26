@@ -9,8 +9,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 const Stack = createStackNavigator();
 
 const globalScreenOptions = {
-  headerStyle: {backgroundColor: "#ffeb33"},
-  headerTitleStyle: {color:"white", alignSelf: 'center' },
+  headerStyle: {backgroundColor: "#ffeb33", borderBottomWidth: 'none'},
+  headerTitleStyle: {color:"#ffeb33", alignSelf: 'center' },
   headerTintColor: "white",
 }
 
