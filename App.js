@@ -6,10 +6,12 @@ import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <StatusBar style="auto" />
-      <Text>Let's build Kakaotalk!🚀✨🎈⭐🛵</Text>
-    </View>
+    <NavigationContainer>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <Text>Let's build Kakaotalk!🚀✨🎈⭐🛵</Text>
+      </View>
+    </NavigationContainer>
   );
 }
 
