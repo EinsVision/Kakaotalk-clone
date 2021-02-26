@@ -8,14 +8,21 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
+const globalScreenOptions = {
+  headerStyle: {backgroundColor: "#2C6BED"},
+  headerTitleStyle: {color:"white", alignSelf: 'center' },
+  headerTintColor: "white",
+}
+
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Screen name='Login' component={LoginScreen} />
-      <View style={styles.container}>
-        <StatusBar style="auto" />
-        <Text>Let's build Kakaotalk!🚀✨🎈⭐🛵</Text>
-      </View>
+      <Stack.Navigator screenOptions={globalScreenOptions}>
+        <Stack.Screen
+          name='Login' 
+          component={LoginScreen}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
