@@ -1,10 +1,18 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+import { Image } from 'react-native-elements'
 
 const LoginScreen = () => {
   return (
     <View>
-      <Text>I am the Login Screen.</Text>
+      <StatusBar style='light' />
+      <Image
+        source={{
+          uri: 'https://cdn.freebiesupply.com/logos/large/2x/kakaotalk-logo-png-transparent.png',
+        }}
+        style={{width: 200, height: 200}}
+      />
     </View>
   )
 }
